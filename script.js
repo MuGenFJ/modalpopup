@@ -13,3 +13,13 @@ modalBtn.addEventListener("click", function(){
 closeBtn.addEventListener("click", function(){
     modalOverlay.classList.remove("open-modal");
 });
+
+// eventListener to the Window [Outside click for close]
+window.addEventListener("click", outSideClose);
+
+//The outSideClose function
+function outSideClose(e){
+    if(e.target == modalOverlay){
+        modalOverlay.classList.remove("open-modal");
+    };
+};
